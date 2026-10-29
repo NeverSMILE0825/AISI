@@ -1,0 +1,128 @@
+
+/* AISI Ethereum edition – theme and launch-safe refinements */
+:root { --red:#8c76ff; --red-deep:#5648c9; --magenta:#b092ff; --cyan:#a1ceff; --amber:#95b5ff; --gold:#9aafff; --green:#70dfbb; --midnight:#0b1027; --purple:#151c3e; --purple-2:#252961; --cream:#eeeaff; --cream-dim:#aca9c7; }
+html {scroll-behavior:smooth} body {background:#080e23}
+.neon-red {color:#f5f2ff; text-shadow:0 0 5px #fff,0 0 15px #7674ff,0 0 34px #786eff,0 0 60px #5542e9;}
+.neon-pink {color:#e7e3ff; text-shadow:0 0 5px #fff,0 0 17px #aaa0ff,0 0 35px #656dff,0 0 67px #3a58c9;}
+.neon-sub {color:#cbd9ff;text-shadow:0 0 9px #8499ff,0 0 22px #7970ff;}
+.store {background:radial-gradient(ellipse at 55% 0,rgba(90,79,200,.23),transparent 55%),radial-gradient(ellipse at 45% 75%,rgba(34,63,119,.12),transparent 60%);}
+.stack-cover{object-fit:cover;object-position:center}
+.poster img{object-fit:cover;object-position:center}
+.member-card,.remote,.shelf,.tv-body,.vcr,.arcade,.clerk{filter:saturate(1.08)}
+.member-card{border-color:rgba(161,183,255,.52)}
+.buy-btn.is-disabled{opacity:.9;background:linear-gradient(115deg,#282d65,#403876);color:#dedafa;border:1px solid #7b77bf;cursor:not-allowed}
+.aisi-social{position:fixed;z-index:175;top:12px;left:12px;display:flex;gap:7px;align-items:center;max-width:calc(100vw - 260px)}
+.aisi-social a,.aisi-social span {font:600 12px/1.15 system-ui,sans-serif;letter-spacing:.04em;padding:8px 10px;border-radius:99px;display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(163,178,255,.45);background:rgba(12,16,41,.88);color:#e3e5ff;backdrop-filter:blur(12px);white-space:nowrap;text-decoration:none}
+.aisi-social a:hover{background:#2e376d;border-color:#b6bdff}.aisi-social span{opacity:.7;cursor:default}
+.aisi-social svg{width:14px;height:14px;fill:currentColor}
+.aisi-footer-note{width:min(980px,calc(100% - 32px));margin:42px auto 55px;text-align:center;font:12px/1.75 system-ui,sans-serif;letter-spacing:.02em;color:#b5b5d2;opacity:.85}
+.aisi-footer-note strong{color:#dde4ff}
+@media(max-width:750px){.aisi-social{position:sticky;top:0;left:0;max-width:100%;padding:9px 10px;background:#070b1ccf;z-index:180;justify-content:center}.aisi-social a,.aisi-social span{font-size:11px;padding:7px 9px}.top-controls{top:50px;right:8px}.neon-title{font-size:clamp(22px,7vw,42px)!important}.poster.hide-sm{display:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+
+/* AISI media-fit revision: full picture visible in every screen */
+.crt,.crt-content,.section-wrap {min-width:0;min-height:0}
+/* CRT hardware stays 4:3. Video was re-rendered to the matching ratio. */
+.crt.tape-transmission {aspect-ratio:4 / 3 !important}
+.sec-transmission,.sec-transmission video {width:100%;height:100%}
+.sec-transmission video {display:block;object-fit:contain !important;object-position:center center;background:#060916}
+.mini-screen video {object-fit:contain !important;object-position:center center;background:#050818}
+/* These slots contain cinematic posters; do not crop faces or lettering. */
+.poster img,.window-poster img,.poster.is-wide img,.stack-cover,.ed-poster img,
+.reel-thumb img,.lightbox-stage img,.footage-stage img,.news-shot img {
+ object-fit:contain !important;object-position:center center !important;
+}
+.poster,.window-poster,.ed-poster,.reel-thumb {background:#080a19}
+.poster img,.window-poster img {background:#080a19}
+.poster.is-wide img {aspect-ratio:1750 / 656 !important}
+.doc-film {aspect-ratio:4 / 5 !important;position:relative !important;min-height:0 !important;background:#070b23}
+.doc-film img {position:absolute;inset:0;width:100%;height:100%;object-fit:contain!important;
+ object-position:center center!important;max-width:100%;max-height:100%;animation:none!important;
+ transform:none!important;background:#060a1c}
+.origin-main {align-items:start;min-width:0}
+.origin-copy,.chapter-body {min-width:0}
+/* Previously oversized footage loaded missing image variants. 16:9 media supplied locally. */
+.footage-stage {aspect-ratio:16 / 9 !important;min-height:0!important;background:#040714}
+.footage-stage img {display:block;width:100%;height:100%;max-height:100%;background:#040714;
+ object-fit:contain!important;object-position:center center!important}
+.footage-stage .loading-reel {z-index:3;pointer-events:none;text-shadow:0 0 12px #050519}
+.lightbox-stage {background:#050818}
+.lightbox-stage img {max-width:100%;max-height:calc(100vh - 150px);background:#050818}
+@media(max-width:760px){
+ .crt.tape-transmission{aspect-ratio:4 / 3!important}
+ .doc-film{aspect-ratio:4 / 5!important;width:100%;max-width:450px;margin-inline:auto}
+ .footage-stage{aspect-ratio:16 / 9!important;min-height:0!important}
+ .poster.is-wide img{aspect-ratio:1750 / 656!important}
+}
+
+/* AISI media-fit revision: full picture visible in every screen */
+.crt,.crt-content,.section-wrap {min-width:0;min-height:0}
+/* CRT hardware stays 4:3. Video was re-rendered to the matching ratio. */
+.crt.tape-transmission {aspect-ratio:4 / 3 !important}
+.sec-transmission,.sec-transmission video {width:100%;height:100%}
+.sec-transmission video {display:block;object-fit:contain !important;object-position:center center;background:#060916}
+.mini-screen video {object-fit:contain !important;object-position:center center;background:#050818}
+/* These slots contain cinematic posters; do not crop faces or lettering. */
+.poster img,.window-poster img,.poster.is-wide img,.stack-cover,.ed-poster img,
+.reel-thumb img,.lightbox-stage img,.footage-stage img,.news-shot img {
+ object-fit:contain !important;object-position:center center !important;
+}
+.poster,.window-poster,.ed-poster,.reel-thumb {background:#080a19}
+.poster img,.window-poster img {background:#080a19}
+.poster.is-wide img {aspect-ratio:1750 / 656 !important}
+.doc-film {aspect-ratio:4 / 5 !important;position:relative !important;min-height:0 !important;background:#070b23}
+.doc-film img {position:absolute;inset:0;width:100%;height:100%;object-fit:contain!important;
+ object-position:center center!important;max-width:100%;max-height:100%;animation:none!important;
+ transform:none!important;background:#060a1c}
+.origin-main {align-items:start;min-width:0}
+.origin-copy,.chapter-body {min-width:0}
+/* Previously oversized footage loaded missing image variants. 16:9 media supplied locally. */
+.footage-stage {aspect-ratio:16 / 9 !important;min-height:0!important;background:#040714}
+.footage-stage img {display:block;width:100%;height:100%;max-height:100%;background:#040714;
+ object-fit:contain!important;object-position:center center!important}
+.footage-stage .loading-reel {z-index:3;pointer-events:none;text-shadow:0 0 12px #050519}
+.lightbox-stage {background:#050818}
+.lightbox-stage img {max-width:100%;max-height:calc(100vh - 150px);background:#050818}
+@media(max-width:760px){
+ .crt.tape-transmission{aspect-ratio:4 / 3!important}
+ .doc-film{aspect-ratio:4 / 5!important;width:100%;max-width:450px;margin-inline:auto}
+ .footage-stage{aspect-ratio:16 / 9!important;min-height:0!important}
+ .poster.is-wide img{aspect-ratio:1750 / 656!important}
+}
+
+/* AISI media-fit revision: full picture visible in every screen */
+.crt,.crt-content,.section-wrap {min-width:0;min-height:0}
+/* CRT hardware stays 4:3. Video was re-rendered to the matching ratio. */
+.crt.tape-transmission {aspect-ratio:4 / 3 !important}
+.sec-transmission,.sec-transmission video {width:100%;height:100%}
+.sec-transmission video {display:block;object-fit:contain !important;object-position:center center;background:#060916}
+.mini-screen video {object-fit:contain !important;object-position:center center;background:#050818}
+/* These slots contain cinematic posters; do not crop faces or lettering. */
+.poster img,.window-poster img,.poster.is-wide img,.stack-cover,.ed-poster img,
+.reel-thumb img,.lightbox-stage img,.footage-stage img,.news-shot img {
+ object-fit:contain !important;object-position:center center !important;
+}
+.poster,.window-poster,.ed-poster,.reel-thumb {background:#080a19}
+.poster img,.window-poster img {background:#080a19}
+.poster.is-wide img {aspect-ratio:1750 / 656 !important}
+.doc-film {aspect-ratio:4 / 5 !important;position:relative !important;min-height:0 !important;background:#070b23}
+.doc-film img {position:absolute;inset:0;width:100%;height:100%;object-fit:contain!important;
+ object-position:center center!important;max-width:100%;max-height:100%;animation:none!important;
+ transform:none!important;background:#060a1c}
+.origin-main {align-items:start;min-width:0}
+.origin-copy,.chapter-body {min-width:0}
+/* Previously oversized footage loaded missing image variants. 16:9 media supplied locally. */
+.footage-stage {aspect-ratio:16 / 9 !important;min-height:0!important;background:#040714}
+.footage-stage img {display:block;width:100%;height:100%;max-height:100%;background:#040714;
+ object-fit:contain!important;object-position:center center!important}
+.footage-stage .loading-reel {z-index:3;pointer-events:none;text-shadow:0 0 12px #050519}
+.lightbox-stage {background:#050818}
+.lightbox-stage img {max-width:100%;max-height:calc(100vh - 150px);background:#050818}
+@media(max-width:760px){
+ .crt.tape-transmission{aspect-ratio:4 / 3!important}
+ .doc-film{aspect-ratio:4 / 5!important;width:100%;max-width:450px;margin-inline:auto}
+ .footage-stage{aspect-ratio:16 / 9!important;min-height:0!important}
+ .poster.is-wide img{aspect-ratio:1750 / 656!important}
+}

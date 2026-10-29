@@ -1,0 +1,1 @@
+This delivery ships the running reference-derived frontend in js/site.js. The original reference ZIP was user-supplied and is not duplicated here to avoid retaining the original website contract addresses and account links. The frontend build is compiled/minified; we provide theme and small enhancement sources in css/aisi.css and js/aisi-enhancements.js.

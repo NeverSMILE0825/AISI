@@ -1,0 +1,14 @@
+{
+  "name": "aisi-video-club",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AISI Ethereum prelaunch VHS video club website adapted from user-supplied reference",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "configure": "node scripts/configure.mjs",
+    "test": "node tests/secret-tape.mjs"
+  }
+}
